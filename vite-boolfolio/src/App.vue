@@ -1,7 +1,23 @@
 <script>
+import AppMain from './components/AppMain.vue';
+
+export default {
+  data() {
+    return {
+      
+    };
+  },
+  components: {
+    AppMain,
+  },
+  methods: {
+    
+  },
+};
 </script>
 
 <template>
+    <AppMain />
 </template>
 
 <style lang="scss">
