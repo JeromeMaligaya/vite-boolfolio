@@ -1,5 +1,6 @@
 <script>
 import axios from 'axios';
+import ProjectsListItem from './ProjectsListItem.vue';
 
 export default {
   name: "ProjectsLIst",
@@ -10,7 +11,7 @@ export default {
     };
   },
   components: {
-    
+    ProjectsListItem,
   },
   methods: {
     getProjects(){
@@ -18,7 +19,8 @@ export default {
             .then(response => {
                 console.log(response);
                 this.projectsList = response.data.results
-            })
+                console.log(this.projectsList);
+              })
             .catch(function(error) {
             console.log(error);
             });
@@ -32,7 +34,11 @@ export default {
 </script>
 
 <template>
-
+  <ul>
+    <ProjectsListItem 
+      v-for="project in projectsList" :key="project.id" :projectObj="project"
+    />
+  </ul>
 </template>
 
 <style lang="scss" scoped>
