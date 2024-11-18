@@ -1,4 +1,6 @@
 <script>
+import ProjectsList from '../components/ProjectsList.vue';
+
 export default {
   name: "AppProjects",
   data() {
@@ -7,7 +9,7 @@ export default {
     };
   },
   components: {
-    
+    ProjectsList,
   },
   methods: {
     
@@ -17,7 +19,7 @@ export default {
 
 <template>
     <main>
-
+        <ProjectsList />
     </main>
 </template>
 
