@@ -1,5 +1,6 @@
 <script>
 import { RouterView } from 'vue-router';
+import AppHeader from './components/AppHeader.vue';
 
 export default {
   data() {
@@ -8,7 +9,7 @@ export default {
     };
   },
   components: {
- 
+    AppHeader,
   },
   methods: {
     
@@ -17,6 +18,8 @@ export default {
 </script>
 
 <template>
+  <AppHeader />
+  
   <RouterView /> 
 </template>
 
