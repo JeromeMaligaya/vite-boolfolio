@@ -34,13 +34,15 @@ export default {
 </script>
 
 <template>
-  <ul>
-    <ProjectsListItem 
-      v-for="project in projectsList" :key="project.id" :projectObj="project"
-    />
-  </ul>
+  <section class="container">
+    <ul id="projects-list" class="list-unstyled row">
+      <ProjectsListItem 
+        v-for="project in projectsList" :key="project.id" :projectObj="project"
+      />
+    </ul>
+  </section>
 </template>
 
 <style lang="scss" scoped>
-  
+
 </style>
